@@ -1,0 +1,279 @@
+1. Mengakses Nilai Dalam Array
+
+Buatlah sebuah fungsi dengan nama balikString. Fungsi ini akan menerima argumen sebuah string dan mengembalikan kebalikannya.
+
+//input "hello world!"
+//output
+"!dlrow olleh"
+
+
+
+2. Melakukan Looping Data Array
+
+Buatlah sebuah fungsi dengan nama dataHandling dengan sebuah parameter untuk menerima argumen. Argumen yang akan diterima adalah sebuah array yang berisi beberapa array sejumlah n. Contoh input dapat dilihat dibawah:
+
+//contoh input
+var input = [
+                ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+                ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+                ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+                ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+            ]
+
+Tugas kamu adalah mengimplementasikan fungsi dataHandling agar dapat menampilkan data-data pada dari argumen seperti di bawah ini:
+
+Nomor ID:  0001
+Nama Lengkap:  Roman Alamsyah
+TTL:  Bandar Lampung 21/05/1989
+Hobi:  Membaca
+
+Nomor ID:  0002
+Nama Lengkap:  Dika Sembiring
+TTL:  Medan 10/10/1992
+Hobi:  Bermain Gitar
+
+Nomor ID:  0003
+Nama Lengkap:  Winona
+TTL:  Ambon 25/12/1965
+Hobi:  Memasak
+
+Nomor ID:  0004
+Nama Lengkap:  Bintang Senjaya
+TTL:  Martapura 6/4/1970
+Hobi:  Berkebun
+
+
+3. Menggunakan Built-in Function pada Array
+
+//contoh input
+["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]
+
+
+
+Buatlah sebuah function dengan nama dataHandling2 yang akan menerima input array seperti di atas.
+Gunakan fungsi splice untuk memodifikasi variabel tersebut agar menjadi seperti array dibawah. Lalu console.log array yang baru seperti di bawah.
+
+["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+
+
+
+ Berdasarkan elemen yang berisikan tanggal/bulan/tahun (elemen ke-4), ambil angka bulan dan console.log nama bulan sesuai dengan angka tersebut.
+        Gunakan split untuk memisahkan antara tanggal, bulan, dan tahun.
+        Format tanggal pada data adalah dd-mm-YYYY
+        Misal angka bulan 01, tuliskan "Januari"
+        Gunakan switch case untuk menuliskan bulan di atas.
+
+Pada array hasil split dari tanggal/bulan/tahun, lakukan sorting secara descending dan console.log array yang sudah di-sort.
+
+Masih pada array hasil split dari elemen tanggal/bulan/tahun, gabungkan semua elemen menggunakan join dan pisahkan dengan karakter strip (-) lalu console.log hasilnya.
+
+Nama (elemen ke-2), harus dibatasi sebanyak 15 karakter saja. Gunakan slice untuk menghapus kelebihan karakter dan console.log nama yang sudah di-slice, sebelum di-slice pastikan Nama (elemen ke-2) sudah dalam bentuk String agar bisa di-slice.
+
+Test-case
+
+var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
+dataHandling2(input);
+
+/**
+ * keluaran yang diharapkan (pada console)
+ *
+ * ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+ * Mei
+ * ["1989", "21", "05"]
+ * 21-05-1989
+ * Roman Alamsyah
+ */
+
+
+ 4. Logic Challenge - Palindrome
+
+ Diberikan sebuah function palindrome(kata) yang menerima satu parameter. Function tersebut akan mengembalikan nilai true jika kata merupakan palindrome, dan false jika bukan. Kata palindrome adalah sebuah kata yang jika dibalik, tetap sama. Contoh, 'katak' dibalik tetaplah 'katak'.
+
+ function palindrome(kata) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(palindrome('katak')); // true
+console.log(palindrome('blanket')); // false
+console.log(palindrome('civic')); // true
+console.log(palindrome('kasur rusak')); // true
+console.log(palindrome('mister')); // false
+
+
+
+5. Logic Challenge - Number Palindrome
+
+Diberikan sebuah function angkaPalindrome(angka) yang menerima satu parameter angka. Function akan me-return angka selanjutnya yang mengandung nilai angka palindrome. Contoh, jika angka adalah 27, maka function akan me-return nilai 33 karena angka 33 adalah angka palindrom. Jika angka dari awal sudah merupakan palindrome, maka function harus mencari angka selanjutnya yang palindrome. Contoh, jika angka adalah 8, walaupun dia sudah palindrome, harus mencari angka selanjutnya yang palindrome, yaitu 9.
+
+function angkaPalindrome(num) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(angkaPalindrome(8)); // 9
+console.log(angkaPalindrome(10)); // 11
+console.log(angkaPalindrome(117)); // 121
+console.log(angkaPalindrome(175)); // 181
+console.log(angkaPalindrome(1000)); // 1001
+
+
+
+6. Logic Challenge - Menghitung Jumlah Kata
+
+Diberikan sebuah function hitungJumlahKata(kalimat) yang menerima parameter berupa string yang merupakan sebuah kalimat. Function akan mengembalikan jumlah kata dari kalimat tersebut. Contoh, "I have a dream" akan menghasilkan nilai 4, karena memiliki 4 kata.
+
+function hitungJumlahKata(kalimat) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(hitungJumlahKata('I have a dream')); // 4
+console.log(hitungJumlahKata('Never eat shredded wheat or cake')); // 6
+console.log(hitungJumlahKata('A song to sing')); // 4
+console.log(hitungJumlahKata('I')); // 1
+console.log(hitungJumlahKata('I believe I can code')); // 5
+
+
+7. Logic Challenge - Pasangan Angka Terbesar
+
+Diberikan sebuah function pasanganTerbesar(angka) yang menerima 1 parameter berupa angka. Functiona akan menentukan pasangan dua digit angka mana yang paling besar dan me-return angka tersebut. Contoh, jika angka adalah 183928, maka function akan me-return 92, pasangan dua digit angka yang paling besar diantara yang lainnya.
+
+function pasanganTerbesar(num) {
+  // you can only write your code here!
+
+
+}
+
+// TEST CASES
+console.log(pasanganTerbesar(641573)); // 73
+console.log(pasanganTerbesar(12783456)); // 83
+console.log(pasanganTerbesar(910233)); // 91
+console.log(pasanganTerbesar(71856421)); // 85
+console.log(pasanganTerbesar(79918293)); // 99
+
+
+8. Logic Challenge - Mencari Mean
+
+Diberikan sebuah function cariMean(arr) yang menerima sebuah array angka. Function akan me-return mean dari array atau deret angka tersebut. Mean adalah angka rata-rata dari deret bilangan tersebut. Contoh, mean atau rata-rata dari [1, 2, 3, 4, 5] adalah 3. Kita perlu kemudian melakukan pembulatan angka dari hasil mean yang didapatkan (pembulatan ke atas).
+
+function cariMean(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(cariMean([1, 2, 3, 4, 5])); // 3
+console.log(cariMean([3, 5, 7, 5, 3])); // 5
+console.log(cariMean([6, 5, 4, 7, 3])); // 5
+console.log(cariMean([1, 3, 3])); // 2
+console.log(cariMean([7, 7, 7, 7, 7])); // 7
+
+
+9. Logic Challenge - Perkalian Unik
+
+Diberikan sebuah function perkalianUnik(arr) yang menerima satu parameter berupa array yang berisikan angka. Function akan me-return array baru yang mengandung angka yang setiap nilainya merupakan hasil kali angka lain yang bukan angka itu sendiri. Contoh, jika arr adalah [1, 2, 3, 4, 5], maka function akan mereturn [120, 60, 40, 30, 24], karena 120 adalah 2 * 3 * 4 * 5, 60 adalah 1 * 3 * 4 * 5, 40 adalah 1 * 2 * 4 * 5, dan seterusnya.
+
+function perkalianUnik(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(perkalianUnik([2, 4, 6])); // [24, 12, 8]
+console.log(perkalianUnik([1, 2, 3, 4, 5])); // [120, 60, 40, 30, 24]
+console.log(perkalianUnik([1, 4, 3, 2, 5])); // [120, 30, 40, 60, 24]
+console.log(perkalianUnik([1, 3, 3, 1])); // [9, 3, 3, 9]
+console.log(perkalianUnik([2, 1, 8, 10, 2])); // [160, 320, 40, 32, 160]
+
+
+10. Logic Challenge - Tentukan Deret Aritmatika
+
+Diberikan sebuah function tentukanDeretAritmatika(arr) yang menerima satu parameter berupa array yang terdiri dari angka. Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret aritmatika. Deret aritmatika adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten. Contoh, [2, 4, 6, 8] adalah deret aritmatika dengan pertambahan nilai sebesar 2, dan [2, 4, 6, 9] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten.
+
+
+function tentukanDeretAritmatika(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true
+console.log(tentukanDeretAritmatika([2, 4, 6, 12, 24])); // false
+console.log(tentukanDeretAritmatika([2, 4, 6, 8])); // true
+console.log(tentukanDeretAritmatika([2, 6, 18, 54])); // false
+console.log(tentukanDeretAritmatika([1, 2, 3, 4, 7, 9])); // false
+
+
+11. Logic Challenge - Tentukan Deret Geometri
+
+Diberikan sebuah function tentukanDeretGeometri(arr) yang menerima satu parameter berupa array yang terdiri dari angka. Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret geometri. Deret geometri adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten secara perkalian. Contoh, [1, 3, 9, 27, 81] adalah deret aritmatika dengan pertambahan nilai sebesar pengalian 3, dan [1, 3, 9, 27, 48] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten secara perkalian (27 * 3 bukanlah 48!).
+
+function tentukanDeretGeometri(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(tentukanDeretGeometri([1, 3, 9, 27, 81])); // true
+console.log(tentukanDeretGeometri([2, 4, 8, 16, 32])); // true
+console.log(tentukanDeretGeometri([2, 4, 6, 8])); // false
+console.log(tentukanDeretGeometri([2, 6, 18, 54])); // true
+console.log(tentukanDeretGeometri([1, 2, 3, 4, 7, 9])); // false
+
+
+12. Logic Challenge - Target Terdekat
+
+Diberikan sebuah function targetTerdekat(arr) yang menerima satu parameter berupa array yang terdiri dari karakter. Function akan me-return jarak spasi antar karakter 'o' dengan karakter 'x' yang terdekat. Contoh, jika arr adalah ['x', ' ', 'o', ' ', ' ', 'x'], maka jarak terdekat dari 'o' ke 'x' adalah 2. Jika tidak ditemukan 'x' sama sekali, function akan me-return nilai 0.
+
+function targetTerdekat(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(targetTerdekat([' ', ' ', 'o', ' ', ' ', 'x', ' ', 'x'])); // 3
+console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x'])); // 4
+console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' '])); // 1
+console.log(targetTerdekat([' ', ' ', 'o', ' '])); // 0
+console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x'])); // 2
+
+
+
+13. Logic Challenge - Mengelompokkan Angka
+
+Diberikan sebuah function mengelompokkanAngka(arr) yang menerima satu parameter berupa array yang berisi angka-angka. Function akan me-return array multidimensi dimana array tersebut berisikan 3 kategori/kelompok:
+
+    kelompok pertama (baris pertama) merupakan angka-angka genap
+    kelompok ke-2 (baris ke-2) merupakan angka-angka ganjil
+    kelompok ke-3 (baris ke-3) merupakan angka-angka kelipatan 3
+
+Contoh jika arr inputan adalah [45, 20, 21, 2, 7] maka output: [ [ 20, 2 ], [ 7 ], [ 45, 21 ] ]
+
+
+function mengelompokkanAngka(arr) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(mengelompokkanAngka([2, 4, 6])); // [ [2, 4], [], [6] ]
+console.log(mengelompokkanAngka([1, 2, 3, 4, 5, 6, 7, 8, 9])); // [ [ 2, 4, 8 ], [ 1, 5, 7 ], [ 3, 6, 9 ] ]
+console.log(mengelompokkanAngka([100, 151, 122, 99, 111])); // [ [ 100, 122 ], [ 151 ], [ 99, 111 ] ]
+console.log(mengelompokkanAngka([])); // [ [], [], [] ]
+
+
+14. Logic Challenge - Mengelompokkan Hewan
+
+Diberikan sebuah function groupAnimals(arr) yang menerima satu parameter berupa array yang berisi string. Function akan me-return array multidimensi dimana array tersebut berisikan kategori/kelompok array yang dikumpulkan sesuai dengan abjad depannya. Abjad harus berurut dari a-z (jika ada). Untuk kasus ini, anggap saja semua text lowercase.
+
+Contoh jika animals adalah ["ayam", "kucing", "bebek", "bangau", "zebra"]
+
+maka akan menampilkan output: [ [ "ayam" ], [ "bebek", "bangau" ], [ "kucing ], [ "zebra" ] ]
+
+Urutan hewan dalam array setiap pengelompokan huruf tidak penting.
+
+
+function groupAnimals(animals) {
+  // you can only write your code here!
+}
+
+// TEST CASES
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
+// [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
+// [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
